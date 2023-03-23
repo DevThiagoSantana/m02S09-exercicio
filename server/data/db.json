@@ -1,4 +1,18 @@
 {
+  "users": [
+    {
+      "id": 1,
+      "username": "Thiago",
+      "password": "Secret123",
+      "isAdmin": true
+    },
+    {
+      "id": 2,
+      "username": "Irineu",
+      "password": "Secret123",
+      "isAdmin": false
+    }
+  ],
 "courses": [
     {
       "id": 1,

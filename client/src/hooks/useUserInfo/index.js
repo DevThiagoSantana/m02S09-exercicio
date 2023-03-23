@@ -1,1 +1,1 @@
-export{useUserInfo, useUserIsAdmin} from "./useUserInfo";
+export{useUserInfo, useUserIsAdmin, useSetUserInfo} from "./useUserInfo";

@@ -1,0 +1,6 @@
+.loginPageContainer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-6);
+  align-items: start;
+}

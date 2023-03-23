@@ -1,1 +1,1 @@
-export{GlobalStateProvider,useGlobalState} from "./useGlobalState";
+export{GlobalStateProvider,useGlobalState,useSetGlobalState} from "./useGlobalState";

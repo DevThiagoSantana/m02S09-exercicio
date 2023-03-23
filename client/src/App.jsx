@@ -5,15 +5,11 @@ import PageWrapper from "./components/PageWrapper";
 import Footer from "./components/Footer";
 import { GlobalStateProvider } from "./hooks/useGlobalState";
 import HomePage from "./pages/HomePage";
+import LoginPage from "./pages/LoginPage"
 import CourseDetailsPage from "./pages/CourseDetailsPage";
 
 function App() {
-  const [globalState,setGlobalState] =useState({
-    user:{
-      nome:"thiago",
-      isAdmin:true,
-    }
-  });
+  const [globalState,setGlobalState] =useState();
   return (
     <GlobalStateProvider value={[globalState,setGlobalState]}>
       <BrowserRouter>
@@ -21,6 +17,7 @@ function App() {
         <PageWrapper>        
           <Routes>
             <Route path="/" element={<HomePage/>} />
+            <Route path="/login" element={<LoginPage />} />
             <Route path ="/course/:id" element={<CourseDetailsPage/>} />  
             <Route path="*" element={<div>Página não encontrada</div>} />       
           </Routes>        
