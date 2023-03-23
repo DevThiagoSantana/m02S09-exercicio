@@ -3,7 +3,7 @@ import { apiService } from "../../services/api";
 
 const useCourseDetails =(id) =>{
   const[data, setData] = useState(null);
-  const[isLoading, setIsloading] = useState(false);
+  const[isLoading, setIsLoading] = useState(false);
   const[error ,setError] = useState(null);
 
   const fetchData =async() => {
@@ -18,7 +18,7 @@ const useCourseDetails =(id) =>{
   };
   useEffect(()=>{
     fetchData();
-  },{});
+  },[]);
   
   return{
     course:data,
@@ -26,4 +26,6 @@ const useCourseDetails =(id) =>{
     error,
   };
 };
+
+export default useCourseDetails;
 
