@@ -15,4 +15,5 @@
 .navbarLogoBox {
   display: flex;
   gap: var(--spacing-4);
+  text-decoration: none;
 }

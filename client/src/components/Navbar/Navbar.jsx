@@ -1,12 +1,13 @@
-import './Navbar.css';
+import { Link } from 'react-router-dom';
+import "./Navbar.css";
 
 function Navbar() {
   return (
-    <header className='navbarContainer'>
-      <div className='navbarLogoBox'>
-        <img src='/logo.png' alt='Logo' />
+    <header className="navbarContainer">
+      <Link to ="/" className="navbarLogoBox">
+        <img src="/logo.png" alt="Logo" />
         <h1>DEVinCursos</h1>
-      </div>
+      </Link>
     </header>
   );
 }
