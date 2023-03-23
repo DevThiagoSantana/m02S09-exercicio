@@ -6,6 +6,7 @@ import Footer from "./components/Footer";
 import { GlobalStateProvider } from "./hooks/useGlobalState";
 import HomePage from "./pages/HomePage";
 import LoginPage from "./pages/LoginPage"
+import NotFoundPage from "./pages/NotFoundPage";
 import CourseDetailsPage from "./pages/CourseDetailsPage";
 
 function App() {
@@ -19,7 +20,7 @@ function App() {
             <Route path="/" element={<HomePage/>} />
             <Route path="/login" element={<LoginPage />} />
             <Route path ="/course/:id" element={<CourseDetailsPage/>} />  
-            <Route path="*" element={<div>Página não encontrada</div>} />       
+            <Route path="*" element={<NotFoundPage />} />       
           </Routes>        
         </PageWrapper>
         <Footer />

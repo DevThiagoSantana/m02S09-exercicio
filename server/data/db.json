@@ -3,12 +3,14 @@
     {
       "id": 1,
       "username": "Thiago",
+      "email":"thiago_claw@hotmail.com",
       "password": "Secret123",
       "isAdmin": true
     },
     {
       "id": 2,
       "username": "Irineu",
+      "email":"voce.nao_sabe@nemeu.com",
       "password": "Secret123",
       "isAdmin": false
     }
