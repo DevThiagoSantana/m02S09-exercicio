@@ -1,9 +1,11 @@
-import { GlobalStateProvider } from "./hooks/useGlobalState";
-import Navbar from './components/Navbar';
-import PageWrapper from './components/PageWrapper';
-import Footer from './components/Footer';
-import HomePage from './pages/HomePage';
 import { useState } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import PageWrapper from "./components/PageWrapper";
+import Footer from "./components/Footer";
+import { GlobalStateProvider } from "./hooks/useGlobalState";
+import HomePage from "./pages/HomePage";
+import CourseDetailsPage from "./pages/CourseDetailsPage";
 
 function App() {
   const [globalState,setGlobalState] =useState({
@@ -17,7 +19,13 @@ function App() {
       <Navbar />
 
       <PageWrapper>
-        <HomePage />
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<HomePage/>} />
+            <Route path ="/course/:id" element={<CourseDetailsPage/>} />  
+            <Route path="*" element={<div>Página não encontrada</div>} />       
+          </Routes>
+        </BrowserRouter>  
       </PageWrapper>
 
       <Footer />

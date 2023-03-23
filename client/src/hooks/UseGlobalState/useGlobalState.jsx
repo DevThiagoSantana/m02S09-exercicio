@@ -14,6 +14,6 @@ export function useGlobalState() {
 }
 
 export function useSetGlobalState() {
-  const [_, setGlobalState] = useGlobalStateContext();
+  const [globalState, setGlobalState] = useGlobalStateContext();
   return setGlobalState;
 }
