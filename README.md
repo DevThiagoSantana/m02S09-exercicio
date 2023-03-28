@@ -7,7 +7,7 @@ Projeto integrado desenvolvido durante as semanas do módulo 02 nas aulas de Rea
 Para clonar o repositório é preciso executar o comando
 
 ```
-git clone git@github.com:Devin-ilog/m02-projeto-integrado-react.git
+git clone git@github.com:DevThiagoSantana/m02S09-exercicio.git
 ```
 
 ## Pasta **client**
