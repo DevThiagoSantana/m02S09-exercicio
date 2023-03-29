@@ -1,7 +1,7 @@
-import './PageWrapper.css';
+import './PageWrapper.css'
 
-function PageWrapper({ children }) {
-  return <main className='pageWrapperContainer'>{children}</main>;
+function PageWrapper ({ children }) {
+  return <main className='pageWrapperContainer'>{children}</main>
 }
 
-export default PageWrapper;
+export default PageWrapper

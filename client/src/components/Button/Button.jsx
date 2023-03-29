@@ -1,15 +1,15 @@
-import PropTypes from 'prop-types';
+import PropTypes from 'prop-types'
 
-import { BUTTON_VARIANT } from './ButtonVariant';
+import { BUTTON_VARIANT } from './ButtonVariant'
 
-import './Button.css';
+import './Button.css'
 
-function Button({ children, variant = BUTTON_VARIANT.PRIMARY, ...props }) {
+function Button ({ children, variant = BUTTON_VARIANT.PRIMARY, ...props }) {
   return (
     <button className={`button ${variant}`} {...props}>
       {children}
     </button>
-  );
+  )
 }
 
 Button.propTypes = {
@@ -20,8 +20,8 @@ Button.propTypes = {
     BUTTON_VARIANT.PRIMARY_OUTLINED,
     BUTTON_VARIANT.SECONDARY,
     BUTTON_VARIANT.SECONDARY_LINK,
-    BUTTON_VARIANT.SECONDARY_OUTLINED,
-  ]),
-};
+    BUTTON_VARIANT.SECONDARY_OUTLINED
+  ])
+}
 
-export default Button;
+export default Button

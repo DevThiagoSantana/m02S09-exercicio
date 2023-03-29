@@ -1,11 +1,11 @@
-import './Footer.css';
+import './Footer.css'
 
-function Footer() {
+function Footer () {
   return (
     <footer className='footerContainer'>
       <p>DEVinCursos | {new Date().getFullYear()}</p>
     </footer>
-  );
+  )
 }
 
-export default Footer;
+export default Footer

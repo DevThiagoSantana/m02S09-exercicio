@@ -1,21 +1,21 @@
-import { useState } from 'react';
-import PropTypes from 'prop-types';
+import { useState } from 'react'
+import PropTypes from 'prop-types'
 
-import Button, { BUTTON_VARIANT } from '../Button';
-import InputGroup from '../InputGroup';
+import Button, { BUTTON_VARIANT } from '../Button'
+import InputGroup from '../InputGroup'
 
-import './CourseFilter.css';
+import './CourseFilter.css'
 
-function CourseFilter({ onFilter }) {
-  const [filter, setFilter] = useState('');
+function CourseFilter ({ onFilter }) {
+  const [filter, setFilter] = useState('')
 
   const handleChangeFilter = (event) => {
-    setFilter(event.target.value);
-  };
+    setFilter(event.target.value)
+  }
 
   const handleClickFilter = () => {
-    onFilter(filter);
-  };
+    onFilter(filter)
+  }
 
   return (
     <div className='courseFilterContainer'>
@@ -31,11 +31,11 @@ function CourseFilter({ onFilter }) {
         Buscar
       </Button>
     </div>
-  );
+  )
 }
 
 CourseFilter.propTypes = {
-  onFilter: PropTypes.func,
-};
+  onFilter: PropTypes.func
+}
 
-export default CourseFilter;
+export default CourseFilter

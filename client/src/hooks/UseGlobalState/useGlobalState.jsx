@@ -1,19 +1,19 @@
-import { createContext, useContext } from "react";
+import { createContext, useContext } from 'react'
 
-const GlobalState = createContext([]);
+const GlobalState = createContext([])
 
-export const GlobalStateProvider = GlobalState.Provider;
+export const GlobalStateProvider = GlobalState.Provider
 
-export function useGlobalStateContext() {
-  return useContext(GlobalState);
+export function useGlobalStateContext () {
+  return useContext(GlobalState)
 }
 
-export function useGlobalState() {
-  const [globalState] = useGlobalStateContext();
-  return globalState;
+export function useGlobalState () {
+  const [globalState] = useGlobalStateContext()
+  return globalState
 }
 
-export function useSetGlobalState() {
-  const [globalState, setGlobalState] = useGlobalStateContext();
-  return setGlobalState;
+export function useSetGlobalState () {
+  const [globalState, setGlobalState] = useGlobalStateContext()
+  return setGlobalState
 }

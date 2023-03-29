@@ -1,8 +1,8 @@
-import PropTypes from 'prop-types';
+import PropTypes from 'prop-types'
 
-import './InputGroup.css';
+import './InputGroup.css'
 
-function InputGroup({ labelText, helperText, ...props }) {
+function InputGroup ({ labelText, helperText, ...props }) {
   return (
     <div className='container'>
       {labelText && (
@@ -15,12 +15,12 @@ function InputGroup({ labelText, helperText, ...props }) {
 
       {!!helperText && <span className='error'>{helperText}</span>}
     </div>
-  );
+  )
 }
 
 InputGroup.propTypes = {
   labelText: PropTypes.string,
-  helperText: PropTypes.string,
-};
+  helperText: PropTypes.string
+}
 
-export default InputGroup;
+export default InputGroup

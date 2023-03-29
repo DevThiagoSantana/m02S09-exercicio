@@ -4,5 +4,5 @@ export const BUTTON_VARIANT = {
   PRIMARY_OUTLINED: 'outlined-primary',
   SECONDARY_OUTLINED: 'outlined-secondary',
   PRIMARY_LINK: 'link-primary',
-  SECONDARY_LINK: 'link-secondary',
-};
+  SECONDARY_LINK: 'link-secondary'
+}
