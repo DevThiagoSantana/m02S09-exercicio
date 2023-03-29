@@ -31,6 +31,7 @@ function CourseCard ({ id, imageUrl, name, category, description, duration }) {
   )
 }
 CourseCard.propTypes = {
+  id: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
   category: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
