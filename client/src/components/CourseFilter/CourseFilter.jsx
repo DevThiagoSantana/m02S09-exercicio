@@ -18,16 +18,19 @@ function CourseFilter ({ onFilter }) {
   }
 
   return (
-    <div className='courseFilterContainer'>
+    <div className="courseFilterContainer">
       <InputGroup
-        type='text'
-        placeholder='Busque pelo nome do curso'
-        labelText='Buscar'
+        type="text"
+        placeholder="Busque pelo nome do curso"
+        labelText="Buscar"
         value={filter}
         onChange={handleChangeFilter}
       />
 
-      <Button variant={BUTTON_VARIANT.PRIMARY_OUTLINED} onClick={handleClickFilter}>
+      <Button
+        variant={BUTTON_VARIANT.PRIMARY_OUTLINED}
+        onClick={handleClickFilter}
+      >
         Buscar
       </Button>
     </div>

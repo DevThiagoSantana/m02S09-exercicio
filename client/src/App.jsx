@@ -17,9 +17,9 @@ function App () {
         <Navbar />
         <PageWrapper>
           <Routes>
-            <Route path="/" element={<HomePage/>} />
+            <Route path="/" element={<HomePage />} />
             <Route path="/login" element={<LoginPage />} />
-            <Route path ="/course/:id" element={<CourseDetailsPage/>} />
+            <Route path="/course/:id" element={<CourseDetailsPage />} />
             <Route path="*" element={<NotFoundPage />} />
           </Routes>
         </PageWrapper>

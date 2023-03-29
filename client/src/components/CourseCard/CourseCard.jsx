@@ -23,8 +23,10 @@ function CourseCard ({ id, imageUrl, name, category, description, duration }) {
         <p>{duration}h</p>
       </div>
 
-      <Button variant={BUTTON_VARIANT.SECONDARY_OUTLINED}
-        onClick={handleNavigateDetails}>
+      <Button
+        variant={BUTTON_VARIANT.SECONDARY_OUTLINED}
+        onClick={handleNavigateDetails}
+      >
         Ver detalhes
       </Button>
     </div>

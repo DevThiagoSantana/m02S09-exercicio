@@ -14,7 +14,7 @@ function HomePage () {
   const userIsAdmin = useUserIsAdmin()
 
   return (
-    <div className='homePageContainer'>
+    <div className="homePageContainer">
       <div className="listHeader">
         <CourseFilter onFilter={fetchData} />
         {userIsAdmin && (
@@ -31,7 +31,11 @@ function HomePage () {
       )}
 
       {!isLoading && !error && !courses.length && (
-        <img height={500} src={emptyState} alt='Imagem de nenhum item encontrado' />
+        <img
+          height={500}
+          src={emptyState}
+          alt="Imagem de nenhum item encontrado"
+        />
       )}
     </div>
   )

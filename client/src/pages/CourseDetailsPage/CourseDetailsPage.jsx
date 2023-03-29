@@ -9,9 +9,10 @@ function CourseDetailsPage () {
   return (
     <div className="courseDetailsPageContainer">
       <h2>Detalhes do Curso</h2>
-      <img src={course?.imageUrl} alt={`Imagem do curso ${course?.name}`}/>
+      <img src={course?.imageUrl} alt={`Imagem do curso ${course?.name}`} />
       <p>
-        <strong>Nome:</strong><span>{course?.name}</span>
+        <strong>Nome:</strong>
+        <span>{course?.name}</span>
       </p>
       <p>
         <strong>Caterogia:</strong> <span>{course?.category}</span>

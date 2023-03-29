@@ -4,16 +4,16 @@ import './InputGroup.css'
 
 function InputGroup ({ labelText, helperText, ...props }) {
   return (
-    <div className='container'>
+    <div className="container">
       {labelText && (
-        <label htmlFor='input' className='label'>
+        <label htmlFor="input" className="label">
           {labelText}
         </label>
       )}
 
-      <input id='input' className='input' {...props} />
+      <input id="input" className="input" {...props} />
 
-      {!!helperText && <span className='error'>{helperText}</span>}
+      {!!helperText && <span className="error">{helperText}</span>}
     </div>
   )
 }

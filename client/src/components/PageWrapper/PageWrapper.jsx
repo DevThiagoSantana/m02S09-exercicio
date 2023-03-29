@@ -2,7 +2,7 @@ import PropTypes from 'prop-types'
 import './PageWrapper.css'
 
 function PageWrapper ({ children }) {
-  return <main className='pageWrapperContainer'>{children}</main>
+  return <main className="pageWrapperContainer">{children}</main>
 }
 
 PageWrapper.propTypes = {
