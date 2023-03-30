@@ -1,0 +1,59 @@
+.register-page-container {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+.register-page-section {
+  width: 828px;
+  max-width: 100%;
+}
+
+.register-page-section-card {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: var(--spacing-5);
+}
+
+.register-page-section-title {
+  color: var(--primary);
+  font-size: 20px;
+  text-align: center;
+  width: 100%;
+}
+
+.register-page-section-form {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: var(--spacing-5);
+}
+
+.register-page-section-form-row {
+  display: flex;
+  gap: var(--spacing-4);
+}
+
+.register-page-section-form-column {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: var(--spacing-5);
+}
+
+.register-page-section-form-group {
+  display: flex;
+  flex: 1;
+  align-items: flex-end;
+  gap: var(--spacing-5);
+}
+
+.register-page-section-form-footer {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-5);
+}
