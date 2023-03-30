@@ -57,3 +57,22 @@
   align-items: center;
   gap: var(--spacing-5);
 }
+
+.register-page-section-form-group-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+}
+
+.register-page-section-form-group-content-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--light-gray);
+  border-radius: var(--border-radius-1);
+  padding: var(--spacing-4);
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: var(--font-bold);
+  color: var(--secondary);
+}
