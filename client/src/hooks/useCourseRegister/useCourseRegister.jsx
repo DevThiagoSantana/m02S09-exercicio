@@ -1,4 +1,4 @@
-import { useState} from 'react'
+import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 import { apiService } from '../../services/api'
@@ -7,7 +7,7 @@ const useCourseRegister = () => {
   const [data, setData] = useState([])
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [error, setError] = useState(null)
-  const navigate =useNavigate()
+  const navigate = useNavigate()
 
   const registerCourse = async (course) => {
     setIsSubmitting(true)

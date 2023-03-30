@@ -4,7 +4,7 @@ import { BUTTON_VARIANT } from './ButtonVariant'
 
 import './Button.css'
 
-function Button ({ children, variant = BUTTON_VARIANT.PRIMARY, ...props }) {
+function Button ({ children, variant = BUTTON_VARIANT.PRIMARY, isIconButton = false, ...props }) {
   return (
     <button className={`button ${variant} ${isIconButton ? 'icon-button' : ''}`} {...props}>
       {children}

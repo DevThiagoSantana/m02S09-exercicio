@@ -5,7 +5,6 @@ import { yupResolver } from '@hookform/resolvers/yup'
 import * as yup from 'yup'
 import { Trash } from 'phosphor-react'
 
-
 import Card from '../../components/Card'
 import InputGroup from '../../components/InputGroup'
 import Button, { BUTTON_VARIANT } from '../../components/Button'
@@ -23,7 +22,7 @@ const schema = yup.object().shape({
 })
 
 function CourseRegisterPage () {
-  const [content, setContent] = useState({value: '', error: '' })
+  const [content, setContent] = useState({ value: '', error: '' })
   const navigate = useNavigate()
 
   const { register, handleSubmit, formState: { errors }, control } = useForm({
@@ -38,25 +37,25 @@ function CourseRegisterPage () {
     resolver: yupResolver(schema)
   })
 
-  const{ fields, append, remove} = useFieldArray({
+  const { fields, append, remove } = useFieldArray({
     control,
     name: 'contents'
   })
 
-  const{ isSubmitting, registerCourse } = useCourseRegister()
+  const { isSubmitting, registerCourse } = useCourseRegister()
 
   const onSubmit = (data) => {
     registerCourse(data)
   }
 
-  const handleAddContent = () =>{
+  const handleAddContent = () => {
     if (content.value) {
       append({ id: new Date().getTime(), text: content.value })
-      setContent({value: '', error: '' })
-      return 
+      setContent({ value: '', error: '' })
+      return
     }
 
-    setContent((prev) => ({...prev, error: 'Campo obrigatório'}))
+    setContent((prev) => ({ ...prev, error: 'Campo obrigatório' }))
   }
 
   const handleChangeContent = (event) => {
