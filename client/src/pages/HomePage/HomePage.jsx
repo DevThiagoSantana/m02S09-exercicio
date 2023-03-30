@@ -1,4 +1,5 @@
 import { Spinner } from 'phosphor-react'
+import { useNavigate } from 'react-router-dom'
 
 import CourseFilter from '../../components/CourseFilter'
 import CourseList from '../../components/CourseList'
@@ -12,13 +13,14 @@ import './HomePage.css'
 function HomePage () {
   const { courses, error, isLoading, fetchData } = useCourseList()
   const userIsAdmin = useUserIsAdmin()
+  const navigate = useNavigate()
 
   return (
     <div className="homePageContainer">
       <div className="listHeader">
         <CourseFilter onFilter={fetchData} />
         {userIsAdmin && (
-          <Button variant={BUTTON_VARIANT.SECONDARY}>Cadastrar Curso</Button>
+          <Button variant={BUTTON_VARIANT.SECONDARY} onClick={() => navigate('/course/register')}>Cadastrar Curso</Button>
         )}
       </div>
 
