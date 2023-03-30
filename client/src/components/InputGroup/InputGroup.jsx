@@ -1,8 +1,8 @@
+import { forwardRef } from 'react'
 import PropTypes from 'prop-types'
-
 import './InputGroup.css'
 
-function InputGroup ({ labelText, helperText, ...props }) {
+const InputGroup = forwardRef(({ labelText, helperText, ...props }, ref) => {
   return (
     <div className="container">
       {labelText && (
@@ -11,16 +11,18 @@ function InputGroup ({ labelText, helperText, ...props }) {
         </label>
       )}
 
-      <input id="input" className="input" {...props} />
+      <input id="input" className="input" ref={ref} {...props} />
 
       {!!helperText && <span className="error">{helperText}</span>}
     </div>
   )
-}
+})
 
 InputGroup.propTypes = {
   labelText: PropTypes.string,
   helperText: PropTypes.string
 }
+
+InputGroup.displayName = 'InputGroup'
 
 export default InputGroup
