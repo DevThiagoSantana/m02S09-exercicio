@@ -10,78 +10,66 @@ export const ButtonStyled = styled.button`
   padding: var(--spacing-3) var(--spacing-5);
   border-radius: var(--border-radius-2);
   transition: 0.3s;
-
+  
 &:disabled {
   cursor: progress;
   opacity: 0.5;
 }
-
 &.primary {
-  border: 1px solid var(--primary);
-  color: var(--white);
-  background-color: var(--primary);
+border: 1px solid ${({ theme }) => theme.colors.primary};
+  color: ${({ theme }) => theme.colors.white};
+  background-color: ${({ theme }) => theme.colors.primary};
 }
-
 &.primary:hover:not(:disabled) {
-  background-color: var(--primary-outlined);
+  background-color: ${({ theme }) => theme.colors.primaryOutlined};
 }
-
 &.secondary {
-  border: 1px solid var(--secondary);
-  color: var(--white);
-  background-color: var(--secondary);
+  border: 1px solid ${({ theme }) => theme.colors.secondary};
+  color: ${({ theme }) => theme.colors.white};
+  background-color: ${({ theme }) => theme.colors.secondary};
 }
-
 &.secondary:hover:not(:disabled) {
-  background-color: var(--secondary-outlined);
+  background-color: ${({ theme }) => theme.colors.secondaryOutlined};
 }
-
 &.outlined-primary {
-  border: 1px solid var(--primary);
-  color: var(--primary);
+  border: 1px solid ${({ theme }) => theme.colors.primary};
+  color: ${({ theme }) => theme.colors.primary};
   background-color: transparent;
 }
-
 &.outlined-primary:hover:not(:disabled) {
-  background-color: var(--primary-outlined);
+  background-color: ${({ theme }) => theme.colors.primaryOutlined};
 }
-
 &.outlined-secondary {
-  border: 1px solid var(--secondary);
-  color: var(--secondary);
+  border: 1px solid ${({ theme }) => theme.colors.secondary};
+  color: ${({ theme }) => theme.colors.secondary};
   background-color: transparent;
 }
-
 &.outlined-secondary:hover:not(:disabled) {
-  background-color: var(--secondary-outlined);
+  background-color: ${({ theme }) => theme.colors.secondaryOutlined};
 }
-
 &.link-primary {
   border: none;
-  color: var(--primary);
+  color: ${({ theme }) => theme.colors.primary};
   background-color: transparent;
   text-decoration: underline;
   text-transform: none;
   border: 1px solid transparent;
 }
-
 &.link-primary:hover:not(:disabled) {
-  border: 1px solid var(--primary);
-  background-color: var(--primary-outlined);
+  border: 1px solid ${({ theme }) => theme.colors.primary};
+  background-color: ${({ theme }) => theme.colors.primaryOutlined};
 }
-
 &.link-secondary {
   border: none;
-  color: var(--secondary);
+  color: ${({ theme }) => theme.colors.secondary};
   background-color: transparent;
   text-decoration: underline;
   text-transform: none;
   border: 1px solid transparent;
 }
-
-&.link-secondary:hover {
-  border: 1px solid var(--secondary);
-  background-color: var(--secondary-outlined);
+&.link-secondary:hover:not(:disabled) {
+  border: 1px solid ${({ theme }) => theme.colors.secondary};
+  background-color: ${({ theme }) => theme.colors.secondaryOutlined};
 }
 &.icon-button {
   border-radius: var(--border-radius-3);

@@ -67,3 +67,15 @@ body {
   flex-direction: column;
 }
 `
+export const mainTheme = {
+  colors: {
+    primary: 'rgba(1, 113, 175, 1)',
+    primaryOutlined: 'rgba(1, 113, 175, 0.5)',
+    secondary: 'rgba(186, 143, 149, 1)',
+    secondaryOutlined: 'rgba(186, 143, 149, 0.5)',
+    darkGray: 'rgba(114, 115, 117, 1)',
+    gray: 'rgba(215, 219, 221, 1)',
+    lightGray: 'rgba(234, 234, 234, 1)',
+    white: 'rgba(255, 255, 255, 1)'
+  }
+}
