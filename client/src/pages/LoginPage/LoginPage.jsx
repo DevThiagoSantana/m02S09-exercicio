@@ -90,11 +90,9 @@ function LoginPage() {
           {loading ? 'Carregando...' : 'Entrar'}
         </Button>
 
-        <Link to="/signin">
-          <SigninButton>
+          <SigninButton to="/signin">
             Cadastrar
           </SigninButton>
-        </Link>
       </LoginCenterBox>
     </LoginPageContainer>
   )

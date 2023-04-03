@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 
 export const LoginPageContainer = styled.div`
   flex-grow: 1;
@@ -43,7 +44,7 @@ export const ErrorMessage = styled.p`
   color: var(--secondary);
 `
 
-export const SigninButton = styled.a`
+export const SigninButton = styled(Link)`
   font-family: "Inter";
   font-style: normal;
   font-weight: var(--font-bold);
