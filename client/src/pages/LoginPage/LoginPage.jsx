@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import InputGroup from '../../components/InputGroup'
 import Button from '../../components/Button'
 import { useSetUserInfo } from '../../hooks/useUserInfo'
