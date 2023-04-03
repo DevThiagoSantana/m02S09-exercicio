@@ -10,7 +10,7 @@ import NotFoundPage from './pages/NotFoundPage'
 import CourseDetailsPage from './pages/CourseDetailsPage'
 import CourseRegisterPage from './pages/CourseRegisterPage'
 
-function App () {
+function App() {
   const [globalState, setGlobalState] = useState()
   return (
     <GlobalStateProvider value={[globalState, setGlobalState]}>

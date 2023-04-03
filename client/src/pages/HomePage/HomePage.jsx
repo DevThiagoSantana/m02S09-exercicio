@@ -10,7 +10,7 @@ import emptyState from '../../assets/empty.svg'
 
 import './HomePage.css'
 
-function HomePage () {
+function HomePage() {
   const { courses, error, isLoading, fetchData } = useCourseList()
   const userIsAdmin = useUserIsAdmin()
   const navigate = useNavigate()

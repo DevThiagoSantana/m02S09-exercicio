@@ -6,7 +6,7 @@ import { useSetUserInfo } from '../../hooks/useUserInfo'
 import { apiService } from '../../services/api'
 import './LoginPage.css'
 
-function LoginPage () {
+function LoginPage() {
   const navigate = useNavigate()
   const setUserInfo = useSetUserInfo()
 

@@ -2,7 +2,7 @@ import { useParams } from 'react-router-dom'
 import useCourseDetails from '../../hooks/useCourseDetails'
 import './CourseDetailsPage.css'
 
-function CourseDetailsPage () {
+function CourseDetailsPage() {
   const { id } = useParams()
   const { course } = useCourseDetails(id)
 

@@ -1,14 +1,12 @@
 import PropTypes from 'prop-types'
-
 import { BUTTON_VARIANT } from './ButtonVariant'
+import { ButtonStyled } from './styles'
 
-import './Button.css'
-
-function Button ({ children, variant = BUTTON_VARIANT.PRIMARY, isIconButton = false, ...props }) {
+function Button({ children, variant = BUTTON_VARIANT.PRIMARY, isIconButton = false, ...props }) {
   return (
-    <button className={`button ${variant} ${isIconButton ? 'icon-button' : ''}`} {...props}>
+    <ButtonStyled className={`${variant} ${isIconButton ? 'icon-button' : ''}`} {...props}>
       {children}
-    </button>
+    </ButtonStyledz>
   )
 }
 

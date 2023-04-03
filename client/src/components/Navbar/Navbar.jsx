@@ -3,7 +3,7 @@ import Button, { BUTTON_VARIANT } from '../Button'
 import { useUserInfo, useSetUserInfo } from '../../hooks/useUserInfo'
 import './Navbar.css'
 
-function Navbar () {
+function Navbar() {
   const location = useLocation()
   const navigate = useNavigate()
   const setUserInfo = useSetUserInfo()

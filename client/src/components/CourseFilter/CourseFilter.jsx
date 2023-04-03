@@ -1,12 +1,11 @@
 import { useState } from 'react'
 import PropTypes from 'prop-types'
-
+import { CourseFilterContainer } from './styles'
 import Button, { BUTTON_VARIANT } from '../Button'
 import InputGroup from '../InputGroup'
 
-import './CourseFilter.css'
 
-function CourseFilter ({ onFilter }) {
+function CourseFilter({ onFilter }) {
   const [filter, setFilter] = useState('')
 
   const handleChangeFilter = (event) => {
@@ -18,7 +17,7 @@ function CourseFilter ({ onFilter }) {
   }
 
   return (
-    <div className="courseFilterContainer">
+    <CourseFilterContainer>
       <InputGroup
         type="text"
         placeholder="Busque pelo nome do curso"
@@ -33,7 +32,7 @@ function CourseFilter ({ onFilter }) {
       >
         Buscar
       </Button>
-    </div>
+    </CourseFilterContainer>
   )
 }
 

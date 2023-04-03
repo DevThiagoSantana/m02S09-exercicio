@@ -4,16 +4,16 @@ const GlobalState = createContext([])
 
 export const GlobalStateProvider = GlobalState.Provider
 
-export function useGlobalStateContext () {
+export function useGlobalStateContext() {
   return useContext(GlobalState)
 }
 
-export function useGlobalState () {
+export function useGlobalState() {
   const [globalState] = useGlobalStateContext()
   return globalState
 }
 
-export function useSetGlobalState () {
+export function useSetGlobalState() {
   const [, setGlobalState] = useGlobalStateContext()
   return setGlobalState
 }

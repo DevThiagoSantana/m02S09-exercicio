@@ -1,6 +1,7 @@
-.courseCardContainer {
-  width: 310px;
+import styled from'styled-components'
 
+export const CourseCardContainer = styled.div`
+  width: 310px;
   padding: var(--spacing-6) var(--spacing-8);
   border-radius: var(--border-radius-1);
   background-color: var(--white);
@@ -10,17 +11,17 @@
   align-items: center;
   justify-content: center;
   gap: var(--spacing-4);
-}
+  `
 
-.courseCardHeader {
+export const CourseCardHeader = styled.div`
   width: 100%;
   display: flex;
   align-items: center;
   gap: var(--spacing-4);
   color: var(--primary);
-}
+`
 
-.courseCardDuration {
+export const CourseCardDuration = styled.div`
   display: flex;
   gap: var(--spacing-3);
   align-items: center;
@@ -28,4 +29,4 @@
   font-size: 16px;
   line-height: 19px;
   color: var(--dark-gray);
-}
+`

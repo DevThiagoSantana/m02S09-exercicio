@@ -1,7 +1,7 @@
 import svg404 from '../../assets/404.svg'
 import './NotFoundPage.css'
 
-function NotFoundPage () {
+function NotFoundPage() {
   return (
     <div className="notFoundPageContainer">
       <img src={svg404} alt="404" />

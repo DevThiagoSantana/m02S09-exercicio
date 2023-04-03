@@ -21,7 +21,7 @@ const schema = yup.object().shape({
   targetMarket: yup.string().required('Campo Obrigatorio')
 })
 
-function CourseRegisterPage () {
+function CourseRegisterPage() {
   const [content, setContent] = useState({ value: '', error: '' })
   const navigate = useNavigate()
 
