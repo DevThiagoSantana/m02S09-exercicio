@@ -1,70 +1,71 @@
-.register-page-container {
+import styled from 'styled-components'
+
+export const RegisterPageContainer = styled.div`
   display: flex;
   flex: 1;
   justify-content: center;
   align-items: center;
-}
+`
 
-.register-page-section {
+export const RegisterPageSection = styled.section`
   width: 828px;
   max-width: 100%;
-}
+`
 
-.register-page-section-card {
+export const RegisterPageSectionCard = styled.div`
   display: flex;
   flex-direction: column;
   flex: 1;
   gap: var(--spacing-5);
-}
-
-.register-page-section-title {
-  color: var(--primary);
+`
+export const RegisterPageSectionTitle = styled.h1`
+color: var(--primary);
   font-size: 20px;
   text-align: center;
   width: 100%;
-}
+`
 
-.register-page-section-form {
+export const RegisterPageSectionForm = styled.form`
+display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: var(--spacing-5);
+`
+
+export const RegisterPageSectionFormRow = styled.div`
+display: flex;
+gap: var(--spacing-4);
+`
+
+export const RegisterPageSectionFormColumn = styled.div`
   display: flex;
   flex-direction: column;
   flex: 1;
   gap: var(--spacing-5);
-}
+`
 
-.register-page-section-form-row {
-  display: flex;
-  gap: var(--spacing-4);
-}
-
-.register-page-section-form-column {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  gap: var(--spacing-5);
-}
-
-.register-page-section-form-group {
+export const RegisterPageSectionFormGroup = styled.div`
   display: flex;
   flex: 1;
   align-items: flex-end;
   gap: var(--spacing-5);
-}
+`
 
-.register-page-section-form-footer {
+export const RegisterPageSectionFormFooter = styled.div`
   display: flex;
   flex: 1;
   flex-direction: column;
   align-items: center;
   gap: var(--spacing-5);
-}
+`
 
-.register-page-section-form-group-content {
+export const RegisterPageSectionFormGroupContent = styled.ul`
   display: flex;
   flex-direction: column;
   gap: var(--spacing-3);
-}
+`
 
-.register-page-section-form-group-content-item {
+export const RegisterPageSectionFormGroupContentItem = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -75,4 +76,4 @@
   line-height: 15px;
   font-weight: var(--font-bold);
   color: var(--secondary);
-}
+`

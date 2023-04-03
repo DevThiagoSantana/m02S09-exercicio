@@ -3,19 +3,19 @@
     {
       "id": 1,
       "username": "Thiago",
-      "email":"thiago_claw@hotmail.com",
+      "email": "thiago_claw@hotmail.com",
       "password": "Secret123",
       "isAdmin": true
     },
     {
       "id": 2,
       "username": "Irineu",
-      "email":"voce.nao_sabe@nemeu.com",
+      "email": "voce.nao_sabe@nemeu.com",
       "password": "Secret123",
       "isAdmin": false
     }
   ],
-"courses": [
+  "courses": [
     {
       "id": 1,
       "imageUrl": "/src/assets/reactjs.png",
@@ -47,6 +47,16 @@
       "category": "front-end",
       "description": "Curso sobre Context API",
       "duration": 6
+    },
+    {
+      "targetMarket": "Nenhum",
+      "duration": 1,
+      "description": " teste",
+      "category": "Teste",
+      "imageUrl": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fpt.pngtree.com%2Ffreepng%2F4-dragon-ball-icon-vector-drgon-illustrtion_8856270.html&psig=AOvVaw1D0hsxZshAVbpXJR59juIH&ust=1680612473383000&source=images&cd=vfe&ved=0CA8QjRxqFwoTCMCT57zfjf4CFQAAAAAdAAAAABAE",
+      "name": "teste",
+      "contents": [],
+      "id": 5
     }
   ]
 }

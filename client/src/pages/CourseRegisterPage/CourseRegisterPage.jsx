@@ -9,8 +9,19 @@ import Card from '../../components/Card'
 import InputGroup from '../../components/InputGroup'
 import Button, { BUTTON_VARIANT } from '../../components/Button'
 import useCourseRegister from '../../hooks/useCourseRegister'
-
-import './CourseRegisterPage.css'
+import {
+  RegisterPageContainer,
+  RegisterPageSection,
+  RegisterPageSectionCard,
+  RegisterPageSectionTitle,
+  RegisterPageSectionForm,
+  RegisterPageSectionFormRow,
+  RegisterPageSectionFormColumn,
+  RegisterPageSectionFormGroup,
+  RegisterPageSectionFormFooter,
+  RegisterPageSectionFormGroupContent,
+  RegisterPageSectionFormGroupContentItem
+} from './styles'
 
 const schema = yup.object().shape({
   name: yup.string().required('Campo Obrigatorio'),
@@ -70,57 +81,56 @@ function CourseRegisterPage() {
   }
 
   return (
-    <div className ="register-page-container">
-      <section className="register-page-section">
+    <RegisterPageContainer>
+      <RegisterPageSection>
         <Card>
-          <div className="register-page-section-card">
-            <h1 className="register-page-section-title">Cadastrar Curso</h1>
-
-            <form className="register-page-section-form" onSubmit={handleSubmit(onSubmit)}>
-              <div className="register-page-section-form-row">
-                <div className="register-page-section-form-column">
+          <RegisterPageSectionCard>
+            <RegisterPageSectionTitle>Cadastrar Curso</RegisterPageSectionTitle>
+            <RegisterPageSectionForm onSubmit={handleSubmit(onSubmit)}>
+              <RegisterPageSectionFormRow>
+                <RegisterPageSectionFormColumn>
                   <InputGroup labelText="Nome" placeholder="Nome do curso" helperText={errors?.name?.message} {... register('name')}/>
                   <InputGroup labelText="Duração" placeholder="Duração do curso" helperText={errors?.name?.message} {... register('duration')}/>
                   <InputGroup labelText="Descrição" placeholder="Descrição do curso" helperText={errors?.name?.message} {... register('description')}/>
-                </div>
+                </RegisterPageSectionFormColumn>
 
-                <div className="register-page-section-form-column">
+                <RegisterPageSectionFormColumn>
                   <InputGroup labelText="Url icone" placeholder="Url contendo icone" helperText={errors?.name?.message} {... register('imageUrl')}/>
                   <InputGroup labelText="Categoria" placeholder="Categoria do curso" helperText={errors?.name?.message} {... register('category')}/>
                   <InputGroup labelText="Público alvo" placeholder="Público alvo do curso" helperText={errors?.name?.message} {... register('targetMarket')}/>
-                </div>
-              </div>
-              <div className="register-page-section-form-group">
+                </RegisterPageSectionFormColumn>
+              </RegisterPageSectionFormRow>
+              <RegisterPageSectionFormGroup>
                 <InputGroup labelText="Conteudo" placeholder="Conteudo do Curso" value={content.value} helperText={content.error} onChange={handleChangeContent} />
                 <div>
                   <Button type="button" variant={BUTTON_VARIANT.SECONDARY_OUTLINED} onCLick={handleAddContent} >Adicionar</Button>
                 </div>
-              </div>
-              <ul className="register-page-section-form-group-content">
+              </RegisterPageSectionFormGroup>
+              <RegisterPageSectionFormGroupContent>
                 {fields.map((field, index) => (
-                  <li key={field.id} className="register-page-section-form-group-content-item" >
+                  <RegisterPageSectionFormGroupContentItem key={field.id}>
                     <p>{field.text}</p>
 
                     <Button isIconButton type="button" variant={BUTTON_VARIANT.SECONDARY_OUTLINED} onCLick={() => handleDeleteContent(index)} >
                       <Trash size={16} />
                     </Button>
-                  </li>
+                  </RegisterPageSectionFormGroupContentItem>
                 ))}
-              </ul>
+              </RegisterPageSectionFormGroupContent>
 
-              <div className="register-page-section-form-footer">
+              <RegisterPageSectionFormFooter>
                 <div>
                   <Button type="submit" disabled={isSubmitting}>Cadastrar</Button>
                 </div>
                 <div>
                   <Button type="submit" variant={BUTTON_VARIANT.PRIMARY_LINK} onCLick={() => navigate('/')}>Cancelar</Button>
                 </div>
-              </div>
-            </form>
-          </div>
+              </RegisterPageSectionFormFooter>
+            </RegisterPageSectionForm>
+          </RegisterPageSectionCard>
         </Card>
-      </section>
-    </div>
+      </RegisterPageSection>
+    </RegisterPageContainer>
 
   )
 }

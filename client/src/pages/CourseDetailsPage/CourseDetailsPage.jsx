@@ -1,13 +1,13 @@
 import { useParams } from 'react-router-dom'
 import useCourseDetails from '../../hooks/useCourseDetails'
-import './CourseDetailsPage.css'
+import { CourseDetailsPageContainer } from './styles'
 
 function CourseDetailsPage() {
   const { id } = useParams()
   const { course } = useCourseDetails(id)
 
   return (
-    <div className="courseDetailsPageContainer">
+    <CourseDetailsPageContainer>
       <h2>Detalhes do Curso</h2>
       <img src={course?.imageUrl} alt={`Imagem do curso ${course?.name}`} />
       <p>
@@ -23,7 +23,7 @@ function CourseDetailsPage() {
       <p>
         <strong>Duração:</strong> <span>{course?.duration}h</span>
       </p>
-    </div>
+    </CourseDetailsPageContainer>
   )
 }
 export default CourseDetailsPage

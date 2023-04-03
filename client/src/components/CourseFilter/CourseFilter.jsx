@@ -4,7 +4,6 @@ import { CourseFilterContainer } from './styles'
 import Button, { BUTTON_VARIANT } from '../Button'
 import InputGroup from '../InputGroup'
 
-
 function CourseFilter({ onFilter }) {
   const [filter, setFilter] = useState('')
 

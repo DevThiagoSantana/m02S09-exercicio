@@ -6,7 +6,7 @@ function Button({ children, variant = BUTTON_VARIANT.PRIMARY, isIconButton = fal
   return (
     <ButtonStyled className={`${variant} ${isIconButton ? 'icon-button' : ''}`} {...props}>
       {children}
-    </ButtonStyledz>
+    </ButtonStyled>
   )
 }
 

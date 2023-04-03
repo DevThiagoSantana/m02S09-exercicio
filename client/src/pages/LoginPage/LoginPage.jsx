@@ -4,7 +4,13 @@ import InputGroup from '../../components/InputGroup'
 import Button from '../../components/Button'
 import { useSetUserInfo } from '../../hooks/useUserInfo'
 import { apiService } from '../../services/api'
-import './LoginPage.css'
+import {
+  LoginCenterBox,
+  LoginPageContainer,
+  LoginForm,
+  Title,
+  SigninButton
+} from './styles.js'
 
 function LoginPage() {
   const navigate = useNavigate()
@@ -55,11 +61,11 @@ function LoginPage() {
   }
 
   return (
-    <div className="loginPageContainer">
-      <div className="loginCenterBox">
-        <h2 className="title">Acessar</h2>
+    <LoginPageContainer>
+      <LoginCenterBox>
+        <Title>Acessar</Title>
 
-        <div className="loginForm">
+        <LoginForm>
           <InputGroup
             type="text"
             placeholder="Seu e-mail"
@@ -76,7 +82,7 @@ function LoginPage() {
             onChange={handleChangePassword}
             helperText={showPasswordHelper ? 'Campo obrigatório' : ''}
           />
-        </div>
+        </LoginForm>
 
         {error && <p className="errorMessage">{error}</p>}
 
@@ -84,11 +90,13 @@ function LoginPage() {
           {loading ? 'Carregando...' : 'Entrar'}
         </Button>
 
-        <Link to="/signin" className="signinButton">
-          Cadastrar
+        <Link to="/signin">
+          <SigninButton>
+            Cadastrar
+          </SigninButton>
         </Link>
-      </div>
-    </div>
+      </LoginCenterBox>
+    </LoginPageContainer>
   )
 }
 
